@@ -1,3 +1,13 @@
+const image = document.createElement("img");
+src = image.url,
+alt = image.alt;
+console.log(image);
+
+
+
+
+
+const imagesAss = document.querySelector('.gallery')
 const images = [
   {
     url: "https://images.pexels.com/photos/140134/pexels-photo-140134.jpeg?dpr=2&h=750&w=1260",
@@ -24,3 +34,11 @@ const images = [
     alt: "Lighthouse Coast Sea",
   }
 ];
+
+
+
+
+
+
+
+
