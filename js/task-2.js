@@ -30,19 +30,21 @@ const images = [
 
 const fragment = document.createDocumentFragment();
 
-images.forEach(function({ url: imageUrl, alt: imageAlt }) {
-  const image = imageUrl; 
-  const count = imageAlt;   
+images.forEach(function ({ url: imageUrl, alt: imageAlt }) {
+  const image = imageUrl;
+  const count = imageAlt;
   console.log(imageUrl, imageAlt);
 
   const li = document.createElement('li');
-li.classList.add('gallery-item');
-const img = document.createElement('img');
-img.src = imageUrl;
-img.alt = imageAlt;
-img.classList.add('gallery-image');
-li.appendChild(img);
-fragment.appendChild(li);
+  li.classList.add('gallery-item');
+
+  const img = document.createElement('img');
+  img.src = imageUrl;
+  img.alt = imageAlt;
+  img.classList.add('gallery-image');
+  
+  li.appendChild(img);
+  fragment.appendChild(li);
 });
 console.log('Fragment children:', fragment.children.length);
 gallery.appendChild(fragment);
