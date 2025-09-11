@@ -16,7 +16,20 @@ body {
 .gallery {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
   justify-content: center;
-  align-items: center;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+}
+
+.gallery-item {
+  flex: 1 1 200px;
+  max-width: 300px;
+}
+
+.gallery-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 4px;
 }

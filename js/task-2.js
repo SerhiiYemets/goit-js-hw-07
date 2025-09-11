@@ -1,13 +1,6 @@
-const image = document.createElement("img");
-src = image.url,
-alt = image.alt;
-console.log(image);
 
+const gallery = document.querySelector('.gallery');
 
-
-
-
-const imagesAss = document.querySelector('.gallery')
 const images = [
   {
     url: "https://images.pexels.com/photos/140134/pexels-photo-140134.jpeg?dpr=2&h=750&w=1260",
@@ -34,6 +27,27 @@ const images = [
     alt: "Lighthouse Coast Sea",
   }
 ];
+
+const fragment = document.createDocumentFragment();
+
+images.forEach(function({ url: imageUrl, alt: imageAlt }) {
+  const image = imageUrl; 
+  const count = imageAlt;   
+  console.log(imageUrl, imageAlt);
+
+  const li = document.createElement('li');
+li.classList.add('gallery-item');
+const img = document.createElement('img');
+img.src = imageUrl;
+img.alt = imageAlt;
+img.classList.add('gallery-image');
+li.appendChild(img);
+fragment.appendChild(li);
+});
+console.log('Fragment children:', fragment.children.length);
+gallery.appendChild(fragment);
+
+
 
 
 
