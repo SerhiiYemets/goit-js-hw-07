@@ -1,6 +1,3 @@
-
-const gallery = document.querySelector('.gallery');
-
 const images = [
   {
     url: "https://images.pexels.com/photos/140134/pexels-photo-140134.jpeg?dpr=2&h=750&w=1260",
@@ -28,11 +25,10 @@ const images = [
   }
 ];
 
+const gallery = document.querySelector('.gallery');
 const fragment = document.createDocumentFragment();
 
 images.forEach(function ({ url: imageUrl, alt: imageAlt }) {
-  const image = imageUrl;
-  const count = imageAlt;
   console.log(imageUrl, imageAlt);
 
   const li = document.createElement('li');
@@ -42,7 +38,7 @@ images.forEach(function ({ url: imageUrl, alt: imageAlt }) {
   img.src = imageUrl;
   img.alt = imageAlt;
   img.classList.add('gallery-image');
-  
+
   li.appendChild(img);
   fragment.appendChild(li);
 });
