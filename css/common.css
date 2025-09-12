@@ -17,7 +17,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 10px;
+  gap: 12px;
   list-style: none;
   padding: 0;
 }
