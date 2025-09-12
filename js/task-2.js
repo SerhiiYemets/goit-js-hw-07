@@ -42,6 +42,7 @@ images.forEach(function ({ url: imageUrl, alt: imageAlt }) {
   li.appendChild(img);
   fragment.appendChild(li);
 });
+
 console.log('Fragment children:', fragment.children.length);
 gallery.appendChild(fragment);
 
