@@ -51,7 +51,3 @@ gallery.appendChild(fragment);
 
 
 
-
-
-
-
