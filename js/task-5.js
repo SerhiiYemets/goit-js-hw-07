@@ -9,16 +9,15 @@ const colorSpan = document.querySelector('.color');
 
 if (!button || !colorSpan) {
   console.error('Елементи button або span не знайдено');
-  return;
+} else {
+  button.addEventListener('click', () => {
+    const randomColor = getRandomHexColor();
+    document.body.style.backgroundColor = randomColor;
+    colorSpan.textContent = randomColor;
+    console.log(randomColor);
+  });
 }
-
-button.addEventListener('click', () => {
-  const randomColor = getRandomHexColor();
-  document.body.style.backgroundColor = randomColor;
-  colorSpan.textContent = randomColor;
-
-  console.log(randomColor);
-});
+  
 
 
 
