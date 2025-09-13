@@ -14,10 +14,9 @@ if (!button || !colorSpan) {
     const randomColor = getRandomHexColor();
     document.body.style.backgroundColor = randomColor;
     colorSpan.textContent = randomColor;
-    console.log(randomColor);
   });
 }
-  
+
 
 
 
